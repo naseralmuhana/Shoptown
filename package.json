@@ -1,0 +1,38 @@
+{
+  "name": "mern-setup",
+  "version": "1.0.0",
+  "description": "MERN backend-frontend setup",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index",
+    "server": "nodemon server/index",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naseralmuhana/MERN-Setup.git"
+  },
+  "author": "Naser Almuhana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naseralmuhana/MERN-Setup/issues"
+  },
+  "homepage": "https://github.com/naseralmuhana/MERN-Setup#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.8.2",
+    "mongoose-autopopulate": "^0.16.1",
+    "mongoose-slug-generator": "^1.0.4",
+    "mongoose-unique-validator": "^3.1.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20"
+  }
+}
