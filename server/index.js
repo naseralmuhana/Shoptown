@@ -2,6 +2,7 @@ import express from "express"
 import dotenv from "dotenv"
 import colors from "colors"
 import morgan from "morgan"
+import cookieParser from "cookie-parser"
 
 import connectDB from "./config/db.config.js"
 import routes from "./routes/index.js"
@@ -22,6 +23,8 @@ const MODE = process.env.NODE_ENV || constants.developmentMode
 // middleware that parses both json and urlencoded
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+// cookie parser middle
+app.use(cookieParser())
 
 if (MODE === constants.developmentMode) {
   // HTTP request logger middleware
